@@ -1,2 +1,21 @@
+font:
+    normal:
+        family: Noto Mono
+        style: Regular
+
+    bold:
+        family: Noto Mono
+        style: Bold
+
+    italic:
+        family: Noto Mono
+        style: Italic
+
+    bold_italic:
+        family: Noto Mono
+        style: Bold Italic
+
+    size: 11
+
 import:
     - ~/.config/alacritty/themes/dracula/dracula.yml
