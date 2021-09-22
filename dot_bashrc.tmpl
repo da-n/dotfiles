@@ -132,7 +132,7 @@ export EDITOR="vim"
 export PATH="${PATH}:${HOME}/go/bin"
 export PATH="${PATH}:/usr/local/go/bin"
 
-{{- if eq .chezmoi.hostname "precision-3551" }}
+{{- if eq .profile "work" }}
 export PATH="${PATH}:${HOME}/fvm/default/bin"
 {{- end }}
 
