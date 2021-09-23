@@ -5,7 +5,7 @@ alias la="ls -la"
 alias jg="make -j generate"
 alias pvr="pillar vm run"
 alias pvs="pillar vm stop && virsh --connect qemu:///system shutdown localpillar"
-alias anr="${HOME}/Android/Sdk/emulator/emulator -avd Pixel_5_API_30 -netdelay none -netspeed full"
+alias anr="emulator -avd Pixel_5_API_30 -netdelay none -netspeed full"
 alias cdp="cd ${HOME}/code/pillar"
 {{- end }}
 
