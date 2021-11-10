@@ -9,5 +9,8 @@ alias pvs="pillar vm stop && virsh --connect qemu:///system shutdown localpillar
 alias anr="emulator -avd Pixel_5_API_30 -netdelay none -netspeed full"
 alias cdp="cd ${HOME}/code/pillar"
 alias cdpm="cd ${HOME}/code/pillar/src/clients/mobile/adalpha_investor_app"
+alias rerun="echo 'Rebuilding platform' && ssh ubuntu@local.pillar 'cd pillar; rm dist/*.txt' && pillar vm run"
+alias gogen='cd src; go generate -tags=generate ./...; cd -'
+alias npmreset='rm -rf ./src/node_modules/ ./src/clients/web/adviser/node_modules/ ./src/clients/web/core/node_modules/ ./src/clients/web/operations/node_modules/     ./src/clients/web/root/node_modules/ ./src/design-system/node_modules/'
 {{- end }}
 
