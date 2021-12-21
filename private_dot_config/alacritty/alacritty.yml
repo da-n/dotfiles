@@ -15,7 +15,7 @@ font:
         family: JetBrains Mono
         style: Bold Italic
 
-    size: 10.0
+    size: 11.0
 
 import:
     - ~/.config/alacritty/themes/dracula/dracula.yml
