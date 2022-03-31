@@ -12,5 +12,15 @@ alias cdpm="cd ${HOME}/code/pillar/src/clients/mobile/adalpha_investor_app"
 alias rerun="echo 'Rebuilding platform' && ssh ubuntu@local.pillar 'cd pillar; rm dist/*.txt' && pillar vm run"
 alias gogen='cd src; go generate -tags=generate ./...; cd -'
 alias npmreset='rm -rf ./src/node_modules/ ./src/clients/web/adviser/node_modules/ ./src/clients/web/core/node_modules/ ./src/clients/web/operations/node_modules/     ./src/clients/web/root/node_modules/ ./src/design-system/node_modules/'
+alias clean='rm -rf ./logs/nomad.log ./cache/go ./.gradle ./src/.gradle'
+alias pll='(cdp && eval `pillar login local.pillar`)'
+alias pld='(cdp && eval `pillar login adalpha.dev`)'
+alias ptv='cdp && eval `pillar tools vault` && cd -'
+alias ptn='(cdp && pillar tools nomad)'
+alias ptj='(cdp && pillar tools jaeger)'
+alias pts='(cdp && pillar tools sql)'
+alias ptc='(cdp && pillar tools clean)'
+alias sshu='(ssh ubuntu@local.pillar)'
+
 {{- end }}
 
