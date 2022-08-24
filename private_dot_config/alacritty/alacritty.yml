@@ -1,3 +1,7 @@
+window:
+    decorations: full
+    gtk_theme_variant: dark
+
 font:
     normal:
         family: JetBrains Mono
