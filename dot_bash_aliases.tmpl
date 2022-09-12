@@ -1,26 +1,27 @@
-alias ll="ls -l"
-alias la="ls -la"
+alias ll='ls -l'
+alias la='ls -la'
 
 {{- if eq .profile "work" }}
-alias jg="make -j generate"
-alias gg="cd ${HOME}/code/pillar/src && go generate -tags=generate ./...; cd -"
-alias pvr="pillar vm run"
-alias pvs="pillar vm stop && virsh --connect qemu:///system shutdown localpillar"
-alias anr="emulator -avd Pixel_5_API_30 -netdelay none -netspeed full"
-alias cdp="cd ${HOME}/code/pillar"
-alias cdpm="cd ${HOME}/code/pillar/src/clients/mobile/adalpha_investor_app"
-alias rerun="echo 'Rebuilding platform' && ssh ubuntu@local.pillar 'cd pillar; rm dist/*.txt' && pillar vm run"
+alias jg='make -j generate'
+alias gg='cd ${HOME}/code/pillar/src && go generate -tags=generate ./...; cd -'
+alias pvr='pillar vm run'
+alias pvs='pillar vm stop && virsh --connect qemu:///system shutdown localpillar'
+alias anr='emulator -avd Pixel_5_API_30 -netdelay none -netspeed full'
+alias cdp='cd ${HOME}/code/pillar'
+alias cdpm='cd ${HOME}/code/pillar/src/clients/mobile/adalpha_investor_app'
 alias gogen='cd src; go generate -tags=generate ./...; cd -'
 alias npmreset='rm -rf ./src/node_modules/ ./src/clients/web/adviser/node_modules/ ./src/clients/web/core/node_modules/ ./src/clients/web/operations/node_modules/     ./src/clients/web/root/node_modules/ ./src/design-system/node_modules/'
 alias clean='rm -rf ./logs/nomad.log ./cache/go ./.gradle ./src/.gradle'
-alias pll='(cdp && eval `pillar login local.pillar`)'
-alias pld='(cdp && eval `pillar login adalpha.dev`)'
-alias ptv='cdp && eval `pillar tools vault` && cd -'
-alias ptn='(cdp && pillar tools nomad)'
-alias ptj='(cdp && pillar tools jaeger)'
-alias pts='(cdp && pillar tools sql)'
-alias ptc='(cdp && pillar tools clean)'
-alias sshu='(ssh ubuntu@local.pillar)'
+alias pll='eval `pillar login local.pillar`'
+alias pld='eval `pillar login adalpha.dev`'
+alias plt='eval `pillar login adalpha.tech`'
+alias plp='eval `pillar login tbajb.co.uk`'
+alias ptv='eval `pillar tools vault`'
+alias ptn='pillar tools nomad'
+alias ptj='pillar tools jaeger'
+alias pts='pillar tools sql'
+alias ptc='pillar tools clean'
+alias sshu='ssh ubuntu@local.pillar'
 
 {{- end }}
 
