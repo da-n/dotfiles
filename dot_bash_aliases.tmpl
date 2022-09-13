@@ -4,6 +4,7 @@ alias la='ls -la'
 {{- if eq .profile "work" }}
 alias jg='make -j generate'
 alias gg='cd ${HOME}/code/pillar/src && go generate -tags=generate ./...; cd -'
+alias pvreset='pillar vm reset'
 alias pvr='pillar vm run'
 alias pvs='pillar vm stop && virsh --connect qemu:///system shutdown localpillar'
 alias anr='emulator -avd Pixel_5_API_30 -netdelay none -netspeed full'
