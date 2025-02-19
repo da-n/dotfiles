@@ -22,3 +22,7 @@ stow tmux
 
 Nerd Fonts are needed in some of the configurations. You can download Nerd Fonts from [nerdfonts.com](https://www.nerdfonts.com/).
 
+## Credit
+
+This approach to dotfile management was heavily inspired/borrowed from [hamvocke/dotfiles](https://github.com/hamvocke/dotfiles).
+
