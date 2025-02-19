@@ -14,7 +14,7 @@
     p = pull
     b = branch --show-current
     r = rev-list --format=short -1 HEAD
-[includeIf "gitdir:~/pillar/"]
+[includeIf "gitdir:~/code/pillar/"]
       path = config.pillar
 [includeIf "gitdir:~/dotfiles/"]
       path = config.personal
