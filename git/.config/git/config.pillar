@@ -1,0 +1,7 @@
+[user]
+        name = Dan Davidson
+        email = daniel.davidson@ajbell.co.uk
+        signingkey = 5E21E92A10DE641853B7395C96E848B2E3264BC7
+[commit]
+        gpgsign = true
+

@@ -1,0 +1,7 @@
+[user]
+        name = Daniel Davidson
+        email = dan@bitmono.com
+        signingkey = FFB1BF782E29F6B90E8C41B39AFAF27C3E5D01B7
+[commit]
+        gpgsign = true
+
