@@ -16,6 +16,8 @@
     r = rev-list --format=short -1 HEAD
 [includeIf "gitdir:~/code/pillar/"]
       path = config.pillar
+[includeIf "gitdir:~/code/cka/"]
+      path = config.pillar
 [includeIf "gitdir:~/dotfiles/"]
       path = config.personal
 

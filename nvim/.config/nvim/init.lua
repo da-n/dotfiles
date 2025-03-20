@@ -105,5 +105,16 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+-- Use persistence with a forbidden autocmd that loads the session on start...
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   group = vim.api.nvim_create_augroup("restore_session", { clear = true }),
+--   callback = function()
+--     if vim.fn.getcwd() ~= vim.env.HOME then
+--       require("persistence").load()
+--     end
+--   end,
+--   nested = true,
+-- })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

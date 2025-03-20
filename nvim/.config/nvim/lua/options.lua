@@ -40,8 +40,8 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 
 -- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
@@ -69,6 +69,9 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.opt.confirm = true
+
+-- For a better experience with auto-session plugin, see https://github.com/rmagatti/auto-session
+-- vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
 -- Show a color column for soft wrap.
 -- vim.opt.colorcolumn = '80,100'
