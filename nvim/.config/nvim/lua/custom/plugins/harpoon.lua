@@ -13,8 +13,8 @@ return {
     local harpoon = require 'harpoon'
     -- stylua: ignore
         local keys = {
-            { '<leader>a', function() harpoon:list():add() end, desc = 'H[a]rpoon File', },
-            { '<leader>A', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = 'H[A]rpoon Quick Menu',
+            { '<leader>aa', function() harpoon:list():add() end, desc = 'H[a]rpoon File', },
+            { '<leader>aq', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = 'Harpoon [q]uick Menu',
           },
         }
     for i = 1, 9 do
