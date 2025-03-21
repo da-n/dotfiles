@@ -11,7 +11,6 @@ disabled = true
 
 [env_var.PILLAR_ENVIRONMENT]
 variable = 'PILLAR_ENVIRONMENT'
-default = 'local'
 format = '\[[$env_value]($style)\]'
 style = 'white bold dimmed'
 
