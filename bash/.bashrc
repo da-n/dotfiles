@@ -125,8 +125,8 @@ if [ -d $HOME/Android ]; then
   export PATH="$PATH":"$HOME/Android/Sdk/platform-tools"
 fi
 
-# Kubectl completion
-source <(kubectl completion bash)
+## Kubectl completion
+#source <(kubectl completion bash)
 
 # Using \001 and \002 instead of \[ and \] means they can be used inside a function as well: https://stackoverflow.com/a/43462720
 GREEN="\001\033[01;32m\002"
