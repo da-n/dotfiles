@@ -105,6 +105,9 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+-- Enable Cfilter
+vim.cmd [[ packadd cfilter  ]]
+
 -- Use persistence with a forbidden autocmd that loads the session on start...
 -- vim.api.nvim_create_autocmd("VimEnter", {
 --   group = vim.api.nvim_create_augroup("restore_session", { clear = true }),

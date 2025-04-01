@@ -73,6 +73,10 @@ vim.opt.confirm = true
 -- Display line numbers relative.
 vim.wo.relativenumber = true
 
+-- Make `:grep` use `rg`.
+vim.opt.grepprg = 'rg --vimgrep'
+vim.opt.grepformat = '%f:%l:%c:%m'
+
 -- For a better experience with auto-session plugin, see https://github.com/rmagatti/auto-session
 -- vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 

@@ -6,7 +6,7 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -45,26 +45,26 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Bindings for persistence
--- load the session for the current directory
-vim.keymap.set('n', '<leader>qs', function()
-  require('persistence').load()
-end, { desc = 'Persistence load the session for the current directory' })
+-- -- Bindings for persistence
+-- -- load the session for the current directory
+-- vim.keymap.set('n', '<leader>qs', function()
+--   require('persistence').load()
+-- end, { desc = 'Persistence load the session for the current directory' })
 
--- select a session to load
-vim.keymap.set('n', '<leader>qS', function()
-  require('persistence').select()
-end, { desc = 'Persistence select a session to load' })
+-- -- select a session to load
+-- vim.keymap.set('n', '<leader>qS', function()
+--   require('persistence').select()
+-- end, { desc = 'Persistence select a session to load' })
 
--- load the last session
-vim.keymap.set('n', '<leader>ql', function()
-  require('persistence').load { last = true }
-end, { desc = 'Persistence load the last session' })
+-- -- load the last session
+-- vim.keymap.set('n', '<leader>ql', function()
+--   require('persistence').load { last = true }
+-- end, { desc = 'Persistence load the last session' })
 
--- stop Persistence => session won't be saved on exit
-vim.keymap.set('n', '<leader>qd', function()
-  require('persistence').stop()
-end, { desc = "Persistence stop => session won't be saved on exit" })
+-- -- stop Persistence => session won't be saved on exit
+-- vim.keymap.set('n', '<leader>qd', function()
+--   require('persistence').stop()
+-- end, { desc = "Persistence stop => session won't be saved on exit" })
 
 -- Bindings to get paths.
 local function yank_path(format, with_line)
@@ -82,5 +82,8 @@ end, { desc = 'Yank relative path' })
 vim.keymap.set('n', '<Leader>rn', function()
   yank_path('%:p:.', true)
 end, { desc = 'Yank relative path + line' })
+
+-- Mimic vim-vinegar method of navigating to parent dir in oil.
+-- vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- vim: ts=2 sts=2 sw=2 et
