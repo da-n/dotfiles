@@ -20,7 +20,7 @@ return {
     },
     config = function()
       vim.g['test#strategy'] = 'vimux'
-      vim.g['test#go#gotest#options'] = '-v -tags=debug,test,service_tests,system_tests'
+      vim.g['test#go#gotest#options'] = '-v -tags=debug,test,service_tests,system_tests -count=1'
       vim.g['test#go#delve#options'] = '-tags=debug,test,service_tests,system_tests'
       vim.g['test#echo_command'] = 0
       vim.g['test#preserve_screen'] = 1

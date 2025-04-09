@@ -9,6 +9,9 @@ disabled = true
 [gcloud]
 disabled = true
 
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[\$](bold green)'
+
 [env_var.PILLAR_ENVIRONMENT]
 variable = 'PILLAR_ENVIRONMENT'
 format = '\[[$env_value]($style)\]'

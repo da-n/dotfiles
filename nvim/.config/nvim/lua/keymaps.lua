@@ -79,7 +79,7 @@ end
 vim.keymap.set('n', '<Leader>rr', function()
   yank_path('%:p:.', false)
 end, { desc = 'Yank relative path' })
-vim.keymap.set('n', '<Leader>rn', function()
+vim.keymap.set('n', '<Leader>rl', function()
   yank_path('%:p:.', true)
 end, { desc = 'Yank relative path + line' })
 
