@@ -126,32 +126,32 @@ fi
 #source <(kubectl completion bash)
 
 # Using \001 and \002 instead of \[ and \] means they can be used inside a function as well: https://stackoverflow.com/a/43462720
-GREEN="\001\033[01;32m\002"
-BLUE="\001\033[01;34m\002"
-AMBER="\001\033[01;33m\002"
-RED="\001\033[01;31m\002"
-RESET="\001\033[00m\002"
-
-parse_pillar_env() {
-    local env="${PILLAR_ENVIRONMENT:-local}"  # Default to 'local' if not set
-
-    case "$env" in
-        production)
-            echo -e "$RED[$env]"  # Red for production
-            ;;
-        demo|development)
-            echo -e "$AMBER[$env]"   # Amber/Yellow for demo and dev
-            ;;
-        *)
-            echo -e "$GREEN[$env]"   # Green for local/review
-            ;;
-    esac
-}
-
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
+#GREEN="\001\033[01;32m\002"
+#BLUE="\001\033[01;34m\002"
+#AMBER="\001\033[01;33m\002"
+#RED="\001\033[01;31m\002"
+#RESET="\001\033[00m\002"
+#
+#parse_pillar_env() {
+#    local env="${PILLAR_ENVIRONMENT:-local}"  # Default to 'local' if not set
+#
+#    case "$env" in
+#        production)
+#            echo -e "$RED[$env]"  # Red for production
+#            ;;
+#        demo|development)
+#            echo -e "$AMBER[$env]"   # Amber/Yellow for demo and dev
+#            ;;
+#        *)
+#            echo -e "$GREEN[$env]"   # Green for local/review
+#            ;;
+#    esac
+#}
+#
+#parse_git_branch() {
+#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+#}
+#
 # This means we reset for each command
 #set_bash_prompt() {
 #    PS1='${debian_chroot:+($debian_chroot)}'"${BLUE}\W${RESET} ${GREEN}$(parse_git_branch)${RESET} $(parse_pillar_env)${RESET}$ "
@@ -159,11 +159,19 @@ parse_git_branch() {
 #
 #PROMPT_COMMAND=set_bash_prompt
 
-eval "$(starship init bash)"
-
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# pnpm
+export PNPM_HOME="/home/daniel/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init bash)"
 
