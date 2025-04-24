@@ -40,8 +40,8 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 
 -- disable netrw at the very start of your init.lua
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
