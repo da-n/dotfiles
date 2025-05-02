@@ -272,6 +272,11 @@ return {
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+      require('lspconfig').csharp_ls.setup {
+        cmd = { '/home/daniel/.dotnet/tools/csharp-ls' },
+        root_dir = '~/code/pillar/src/services/atgconnector/',
+      }
+
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
