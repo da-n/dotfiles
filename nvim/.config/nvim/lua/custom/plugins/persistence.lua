@@ -1,5 +1,5 @@
 return {
- {
+  {
     'folke/persistence.nvim',
     event = 'BufReadPre',
     opts = {
@@ -7,5 +7,5 @@ return {
       need = 1,
       branch = true,
     },
-  }
+  },
 }

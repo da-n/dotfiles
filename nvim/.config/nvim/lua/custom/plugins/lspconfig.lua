@@ -243,6 +243,7 @@ return {
         gopls = {
           settings = {
             gopls = {
+              usePlaceholders = true,
               buildFlags = { '-tags=debug,test,service_tests,system_tests' },
               expandWorkspaceToModule = true,
               ['local'] = 'gitlab.com/adalpha/pillar',
