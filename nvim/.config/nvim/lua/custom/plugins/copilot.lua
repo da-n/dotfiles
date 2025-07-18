@@ -13,5 +13,7 @@ return {
       ['dap-repl'] = false,
       ['markdown'] = true, -- example: enable for markdown
     }
+
+    vim.g.copilot_no_tab_map = true -- Disable default tab mapping
   end,
 }
